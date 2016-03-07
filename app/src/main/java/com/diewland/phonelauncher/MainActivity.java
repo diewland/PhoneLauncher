@@ -99,7 +99,7 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View view) {
                 if(txt_tel.getText().length() > 0) {
                     Intent intent = new Intent(Intent.ACTION_CALL);
-                    intent.setData(Uri.parse("tel:" + txt_tel.getText().toString()));
+                    intent.setData(Uri.parse("tel:" + Uri.encode(txt_tel.getText().toString())));
                     startActivity(intent);
                 }
             }
